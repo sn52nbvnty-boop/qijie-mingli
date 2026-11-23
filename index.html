@@ -308,6 +308,11 @@ body.result .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))} /
       <div class="txt" id="rMiss"></div>
     </div>
 
+    <div class="card" id="persCard">
+      <h2>你的內在與外在個性</h2>
+      <div class="txt" id="rPers"></div>
+    </div>
+
     <div class="card">
       <h2>完整報告還有這些</h2>
       <div id="locks"></div>
@@ -650,6 +655,14 @@ function show(name, st, birth, surLen){
                                : ["**財官印食四顆主星都有，五行俱全**：" + get(MS, "比", g)];
   $("rMiss").innerHTML = rich(lines.join(String.fromCharCode(10, 10)));
 
+  // 內在／外在個性（與 命理程式.py 相同）：外在看人格五行，天格生人格時看天格；內在看人格五行，地格生人格時看地格
+  var me5 = G.人格.五行;
+  var outer5 = GEN[G.天格.五行] === me5 ? G.天格.五行 : me5;
+  var inner5 = GEN[G.地格.五行] === me5 ? G.地格.五行 : me5;
+  var PS = R.個性 || {}, pin = get(PS, inner5, g), pout = get(PS, outer5, g);
+  $("rPers").innerHTML = rich([pin ? "**內在個性**：" + pin : "", pout ? "**外在個性**：" + pout : ""].filter(Boolean).join(String.fromCharCode(10, 10)));
+  $("persCard").hidden = !(pin || pout);
+
   // 今年流年運勢（只開今年：流年 × 機會點；九年、十年表與逐年解析在付費報告）
   $("rYearH").textContent = "民國 " + FY + " 年流年運勢：" + r.流年 + " × " + r.機會點;
   $("rStage").textContent = r.流年; $("rOpp").textContent = r.機會點;
@@ -660,7 +673,7 @@ function show(name, st, birth, surLen){
   var fake = LOCK_FAKE;
   var nextOpp = (r.機會點表.filter(function(x){ return x.年 === FY + 1; })[0] || {}).標;
   var locks = [
-    ["姓名五格與內在、外在個性", "五格的星組合、缺星與人生各階段"],
+    ["姓名五格格局", "五格的星組合與人生各階段"],
     ["出生年納音與沖害合", r.年柱 + "年生的你，和名字的互動"],
     ["九年機會點、十年流年", "逐年解析，提早知道哪年該衝、哪年該守"]
   ];
