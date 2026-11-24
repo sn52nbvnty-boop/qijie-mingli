@@ -14,17 +14,17 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%23b0566b%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2736%27 text-anchor=%27middle%27 fill=%27%23fff%27 font-family=%27serif%27%3E%E7%B6%BA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%239c8c5a%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2736%27 text-anchor=%27middle%27 fill=%27%23fff%27 font-family=%27serif%27%3E%E7%B6%BA%3C/text%3E%3C/svg%3E">
 <!--分享預覽 結束-->
-<meta name="theme-color" content="#b0566b">
+<meta name="theme-color" content="#9c8c5a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* 版面：手機單欄卡片；玫瑰＋金（與 PDF 報告同一套配色），刻意只有淺色版 */
+/* 版面：手機單欄卡片；米白＋卡其金（與女生版 PDF 同一套配色），刻意只有淺色版 */
 :root{
-  --rose:#b0566b; --rose-d:#8c3d51; --rose-l:#f6e4e8; --gold:#b8964f; --gold-l:#efe2c2;
-  --ink:#3d2a2f; --muted:#8a7378; --paper:#fbf6f1; --card:#ffffff; --line:#ead9d3; --cream:#fffaf0;
+  --rose:#9c8c5a; --rose-d:#5f5638; --rose-l:#efeadb; --gold:#b5a46c; --gold-l:#e6dec6;
+  --ink:#3a3733; --muted:#8a857a; --paper:#f4f1ec; --card:#ffffff; --line:#e6e0d5; --cream:#fffaf0;
   --wood:#5c8a4f; --fire:#c0503f; --earth:#a8823a; --metal:#8a8f99; --water:#3f6e9e;
 }
 *{box-sizing:border-box}
@@ -32,7 +32,7 @@ html,body{margin:0}
 [hidden]{display:none!important}
 body{
   font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei","微軟正黑體",sans-serif; color:var(--ink);
-  background:var(--paper) radial-gradient(circle at 0 0,#f7e3e6 0,transparent 55%) no-repeat;
+  background:var(--paper) radial-gradient(circle at 0 0,#ece6da 0,transparent 55%) no-repeat;
   min-height:100vh; line-height:1.75; -webkit-text-size-adjust:100%;
 }
 .wrap{max-width:560px;margin:0 auto;padding-block:20px 48px;
@@ -42,7 +42,7 @@ header{text-align:center;padding:18px 0 8px}
 .sub{color:var(--gold);font-size:14px;letter-spacing:.2em;margin-top:2px}
 .orn{color:var(--gold);letter-spacing:.6em;font-size:12px;margin:8px 0 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;margin:16px 0;
-  box-shadow:0 6px 20px rgba(140,61,81,.07)}
+  box-shadow:0 6px 20px rgba(95,86,56,.07)}
 .card h2{margin:0 0 10px;font-size:19px;color:var(--rose-d);display:flex;align-items:center;gap:8px;text-wrap:balance}
 .card h2::before{content:"";flex:none;width:4px;height:18px;background:var(--gold);border-radius:2px}
 .card h2 small{margin-left:auto;font-size:13px;font-weight:400;color:var(--muted)}
@@ -94,7 +94,7 @@ input:focus,select:focus{outline:2px solid var(--rose-l);border-color:var(--rose
 .chip{font-size:13px;padding:3px 10px;border-radius:99px;background:var(--rose-l);color:var(--rose-d)}
 .big{display:flex;align-items:center;gap:14px;margin-bottom:8px}
 .num{flex:none;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:700;color:#fff;
-  background:radial-gradient(circle at 35% 30%,#d58a9b,var(--rose-d));box-shadow:0 0 0 3px #fff,0 0 0 5px var(--gold-l)}
+  background:radial-gradient(circle at 35% 30%,#c2b37f,var(--rose-d));box-shadow:0 0 0 3px #fff,0 0 0 5px var(--gold-l)}
 .ttl{font-size:20px;font-weight:700;color:var(--rose-d)}
 .txt p{margin:0 0 .6em}
 .txt b{color:var(--rose-d)}
@@ -109,12 +109,12 @@ input:focus,select:focus{outline:2px solid var(--rose-l);border-color:var(--rose
 .sub-h small{font-weight:400;font-size:12px;color:var(--muted)}
 .cycle{display:grid;grid-template-columns:repeat(9,1fr);gap:3px;font-variant-numeric:tabular-nums}
 .cycle.ten{grid-template-columns:repeat(5,1fr);gap:5px}
-.cycle>div{text-align:center;border-radius:8px;padding:6px 0 5px;background:#faf3f0;line-height:1.25;min-width:0}
+.cycle>div{text-align:center;border-radius:8px;padding:6px 0 5px;background:#f6f3ec;line-height:1.25;min-width:0}
 .cycle .y{font-size:10px;color:var(--muted)}
 .cycle .s{font-size:15px;font-weight:700;color:var(--ink);margin-top:2px;white-space:nowrap}
 .cycle.ten .s{font-size:15px}
 .cycle.ten .y{font-size:11px}
-.cycle>div.now{background:var(--rose);box-shadow:0 2px 8px rgba(140,61,81,.3)}
+.cycle>div.now{background:var(--rose);box-shadow:0 2px 8px rgba(95,86,56,.3)}
 .cycle>div.now .y,.cycle>div.now .s{color:#fff}
 .cycle>div.next{outline:1.5px dashed var(--gold);outline-offset:-1.5px;background:var(--cream)}
 .legend{display:flex;gap:14px;justify-content:flex-end;font-size:12px;color:var(--muted);margin-top:6px}
@@ -140,7 +140,7 @@ input:focus,select:focus{outline:2px solid var(--rose-l);border-color:var(--rose
 .star.miss{background:var(--rose-l);border-color:var(--rose);color:var(--rose-d)}
 .star.miss small{color:var(--rose-d)}
 .pers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.pers>div{border-radius:12px;padding:10px 12px;background:#faf3f0}
+.pers>div{border-radius:12px;padding:10px 12px;background:#f6f3ec}
 .pers .k{font-size:13px;color:var(--muted)}
 .pers .v{font-size:18px;font-weight:700;color:var(--rose-d)}
 .pers .v.blur{filter:blur(6px);user-select:none}
@@ -152,7 +152,7 @@ input:focus,select:focus{outline:2px solid var(--rose-l);border-color:var(--rose
 .lock::after{content:"🔒";position:absolute;right:12px;bottom:10px;font-size:18px}
 
 /* 預約 */
-.cta{background:linear-gradient(160deg,#fff,#fbeef0)}
+.cta{background:linear-gradient(160deg,#fff,#f5f1e6)}
 .plans{display:grid;gap:16px;margin-top:6px}
 .plan{position:relative;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
 .plan.hot{border:2px solid var(--gold);background:var(--cream)}
@@ -164,7 +164,7 @@ input:focus,select:focus{outline:2px solid var(--rose-l);border-color:var(--rose
 .plan .pd{font-size:14px;color:var(--muted);margin-top:2px}
 .plan ul{margin:8px 0 0;padding-left:1.2em;font-size:15px}
 .plan .btn{margin-top:12px;font-size:16px;padding:11px;letter-spacing:.08em}
-.promo{background:linear-gradient(135deg,#fff3d6,#fde6ea);border:1px solid var(--gold);border-radius:12px;padding:10px 14px;text-align:center;color:var(--rose-d);font-weight:600;margin-bottom:14px}
+.promo{background:linear-gradient(135deg,#f7f1df,#f1ecdf);border:1px solid var(--gold);border-radius:12px;padding:10px 14px;text-align:center;color:var(--rose-d);font-weight:600;margin-bottom:14px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
 .step .n{width:32px;height:32px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:var(--rose-l);color:var(--rose-d);font-weight:700}
 .step .s{font-size:14px;line-height:1.5}
@@ -191,8 +191,8 @@ footer{text-align:center;color:var(--gold);font-size:13px;letter-spacing:.2em;ma
 .samples{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
 .samples img{flex:none;width:70%;max-width:260px;border:1px solid var(--line);border-radius:8px;scroll-snap-align:start;box-shadow:0 4px 12px rgba(0,0,0,.06)}
 /* 確認視窗 */
-dialog{border:0;border-radius:16px;padding:22px 20px;width:min(92vw,400px);color:var(--ink);background:var(--card);box-shadow:0 20px 60px rgba(61,42,47,.3)}
-dialog::backdrop{background:rgba(61,42,47,.45)}
+dialog{border:0;border-radius:16px;padding:22px 20px;width:min(92vw,400px);color:var(--ink);background:var(--card);box-shadow:0 20px 60px rgba(58,55,51,.3)}
+dialog::backdrop{background:rgba(58,55,51,.45)}
 dialog h3{margin:0 0 12px;color:var(--rose-d);font-size:19px}
 .cf{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:16px}
 .cf dt{color:var(--muted)}.cf dd{margin:0;font-weight:600}
@@ -202,7 +202,7 @@ dialog h3{margin:0 0 12px;color:var(--rose-d);font-size:19px}
 /* 手機底部預約列 */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:10px;
   padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));
-  background:rgba(255,255,255,.96);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(140,61,81,.1);
+  background:rgba(255,255,255,.96);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(95,86,56,.1);
   transform:translateY(110%);transition:transform .25s ease}
 .bar.on{transform:none}
 .bar .bt{flex:1;min-width:0;font-size:14px;line-height:1.4}
@@ -214,19 +214,19 @@ body.result .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))} /
 /* 結果頁：圓形圖示＋置中標題＋寬鬆內文（莫蘭迪色） */
 .ico{width:76px;height:76px;border-radius:50%;margin:6px auto 14px;display:grid;place-items:center;background:var(--ic,#b9a96f)}
 .ico svg{width:32px;height:32px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.c1{--ic:#b9a96f}.c2{--ic:#8a9a4b}.c3{--ic:#c4848f}.c4{--ic:#7e97ae}.c5{--ic:#a08aae}.c6{--ic:#8fae9a}
+.c1{--ic:#b9a96f}.c2{--ic:#8a9a4b}.c3{--ic:#a89478}.c4{--ic:#7e97ae}.c5{--ic:#a3967a}.c6{--ic:#8fae9a}
 #resultView .card{padding:26px 22px 24px}
 #resultView .card>h2{justify-content:center;text-align:center;flex-direction:column;gap:2px;color:#3a3a3a;font-size:21px;letter-spacing:.08em;margin-bottom:14px}
 #resultView .card>h2::before{display:none}
 #resultView .card>h2 small{margin:0;font-size:12px;letter-spacing:.1em}
 #resultView .txt{font-size:16.5px;line-height:2.05;letter-spacing:.06em;color:#555;text-align:justify}
 #resultView .txt p{margin:0 0 1em}
-#resultView .sub-h{display:block;text-align:center;font-size:18px;color:#3a3a3a;letter-spacing:.08em;border-top:1px solid #eee6e2;margin:22px -22px 12px;padding-top:20px}
+#resultView .sub-h{display:block;text-align:center;font-size:18px;color:#3a3a3a;letter-spacing:.08em;border-top:1px solid #ece8e0;margin:22px -22px 12px;padding-top:20px}
 @media (max-width:360px){.cycle .s{font-size:13px}.g5 .gv{font-size:20px}}
 </style>
 </head>
 <body>
-<noscript><div style="padding:16px;text-align:center;background:#fff3d6">請開啟瀏覽器的 JavaScript 才能使用免費測算。若是在 LINE 裡打開，可以點右上角選「用預設瀏覽器開啟」。</div></noscript>
+<noscript><div style="padding:16px;text-align:center;background:#f7f1df">請開啟瀏覽器的 JavaScript 才能使用免費測算。若是在 LINE 裡打開，可以點右上角選「用預設瀏覽器開啟」。</div></noscript>
 <div class="wrap">
   <header>
     <div class="brand" id="brand">命理室</div>
@@ -609,26 +609,26 @@ function triSVG(lc){
   var ax = 180, ay = 12, by = 212, half = 168, y1 = 82, y2 = 148;
   var hw = function(y){ return (y - ay) / (by - ay) * half; };
   var L = [], P = function(pts, fill){ L.push('<polygon points="' + pts + '" fill="' + fill + '"/>'); };
-  P(ax + "," + ay + " " + (ax - hw(y1)) + "," + y1 + " " + (ax + hw(y1)) + "," + y1, "#f6e4e8");
-  P((ax - hw(y1)) + "," + y1 + " " + (ax + hw(y1)) + "," + y1 + " " + (ax + hw(y2)) + "," + y2 + " " + (ax - hw(y2)) + "," + y2, "#fbf0f3");
+  P(ax + "," + ay + " " + (ax - hw(y1)) + "," + y1 + " " + (ax + hw(y1)) + "," + y1, "#efeadb");
+  P((ax - hw(y1)) + "," + y1 + " " + (ax + hw(y1)) + "," + y1 + " " + (ax + hw(y2)) + "," + y2 + " " + (ax - hw(y2)) + "," + y2, "#f7f4ec");
   P((ax - hw(y2)) + "," + y2 + " " + (ax + hw(y2)) + "," + y2 + " " + (ax + half) + "," + by + " " + (ax - half) + "," + by, "#ffffff");
-  var ln = function(x1, y_1, x2, y_2){ L.push('<line x1="' + x1 + '" y1="' + y_1 + '" x2="' + x2 + '" y2="' + y_2 + '" stroke="#e6bfcc" stroke-width="1.2"/>'); };
-  L.push('<polygon points="' + ax + "," + ay + " " + (ax - half) + "," + by + " " + (ax + half) + "," + by + '" fill="none" stroke="#b8964f" stroke-width="2"/>');
+  var ln = function(x1, y_1, x2, y_2){ L.push('<line x1="' + x1 + '" y1="' + y_1 + '" x2="' + x2 + '" y2="' + y_2 + '" stroke="#dcd3bd" stroke-width="1.2"/>'); };
+  L.push('<polygon points="' + ax + "," + ay + " " + (ax - half) + "," + by + " " + (ax + half) + "," + by + '" fill="none" stroke="#b5a46c" stroke-width="2"/>');
   ln(ax - hw(y1), y1, ax + hw(y1), y1); ln(ax - hw(y2), y2, ax + hw(y2), y2); ln(ax, y1, ax, y2);
   var bl = ax - half; [2, 4, 6].forEach(function(i){ var x = bl + 2 * half * i / 8; ln(x, y2, x, by); });
   var T = function(x, y, v, size, fill, w){ L.push('<text x="' + x + '" y="' + y + '" text-anchor="middle" font-size="' + size + '" fill="' + fill + '"' + (w ? ' font-weight="700"' : "") + ">" + v + "</text>"); };
-  L.push('<circle cx="' + ax + '" cy="58" r="17" fill="#8c3d51"/>'); T(ax, 65, lc.主型, 20, "#fff", 1);
-  T(ax - 34, 120, lc.工作角色, 22, "#8c3d51", 1); T(ax - 34, 138, "工作", 11, "#8a7378");
-  T(ax + 34, 120, lc.家庭角色, 22, "#8c3d51", 1); T(ax + 34, 138, "家庭", 11, "#8a7378");
+  L.push('<circle cx="' + ax + '" cy="58" r="17" fill="#5f5638"/>'); T(ax, 65, lc.主型, 20, "#fff", 1);
+  T(ax - 34, 120, lc.工作角色, 22, "#5f5638", 1); T(ax - 34, 138, "工作", 11, "#8a857a");
+  T(ax + 34, 120, lc.家庭角色, 22, "#5f5638", 1); T(ax + 34, 138, "家庭", 11, "#8a857a");
   var cx = [0, 1, 2, 3].map(function(i){ return bl + 2 * half * (i + .5) / 4; }); cx[0] += 20; cx[3] -= 20;
-  [["啟動碼", lc.啟動碼], ["", lc.下2], ["", lc.下3], ["能量碼", lc.能量碼]].forEach(function(q, i){ T(cx[i], 186, q[1], 20, "#8c3d51", 1); if (q[0]) T(cx[i], 203, q[0], 11, "#8a7378"); });
+  [["啟動碼", lc.啟動碼], ["", lc.下2], ["", lc.下3], ["能量碼", lc.能量碼]].forEach(function(q, i){ T(cx[i], 186, q[1], 20, "#5f5638", 1); if (q[0]) T(cx[i], 203, q[0], 11, "#8a857a"); });
   var dg = lc.日期 + lc.月份 + lc.西元年份, bw = 2 * half / 8;
   for (var i = 0; i < 8; i++) {
     var x = bl + i * bw;
-    L.push('<rect x="' + (x + 3) + '" y="' + (by + 14) + '" width="' + (bw - 6) + '" height="30" rx="6" fill="#fbf0f3" stroke="#e6bfcc"/>');
-    T(x + bw / 2, by + 35, dg[i], 16, "#3d2a2f");
+    L.push('<rect x="' + (x + 3) + '" y="' + (by + 14) + '" width="' + (bw - 6) + '" height="30" rx="6" fill="#f7f4ec" stroke="#dcd3bd"/>');
+    T(x + bw / 2, by + 35, dg[i], 16, "#3a3733");
   }
-  [["日", 0, 2], ["月", 2, 4], ["西元年", 4, 8]].forEach(function(q){ T(bl + bw * (q[1] + q[2]) / 2, by + 66, q[0], 12, "#b8964f"); });
+  [["日", 0, 2], ["月", 2, 4], ["西元年", 4, 8]].forEach(function(q){ T(bl + bw * (q[1] + q[2]) / 2, by + 66, q[0], 12, "#b5a46c"); });
   return L.join("");
 }
 
@@ -860,33 +860,33 @@ function drawCard(){
   var r = CUR.r, lc = r.生命密碼, m = R.主型[lc.主型] || {};
   var W = 1080, H = 1350, cv = document.createElement("canvas"); cv.width = W; cv.height = H;
   var x = cv.getContext("2d"), F = '"Noto Serif TC","DFKai-SB",serif';
-  var bg = x.createLinearGradient(0, 0, W, H); bg.addColorStop(0, "#fbeef0"); bg.addColorStop(1, "#fbf6f1");
+  var bg = x.createLinearGradient(0, 0, W, H); bg.addColorStop(0, "#f5f1e6"); bg.addColorStop(1, "#f4f1ec");
   x.fillStyle = bg; x.fillRect(0, 0, W, H);
-  x.strokeStyle = "#b8964f"; x.lineWidth = 4; x.strokeRect(40, 40, W - 80, H - 80);
+  x.strokeStyle = "#b5a46c"; x.lineWidth = 4; x.strokeRect(40, 40, W - 80, H - 80);
   x.lineWidth = 1.5; x.strokeRect(56, 56, W - 112, H - 112);
   x.textAlign = "center"; x.textBaseline = "alphabetic";
   var t = function(s, X, Y, size, color, bold){ x.font = (bold ? "700 " : "400 ") + size + "px " + F; x.fillStyle = color; x.fillText(s, X, Y); };
-  t(C.品牌名稱, W / 2, 170, 60, "#8c3d51", 1);
-  t("◆ 我的命理小卡 ◆", W / 2, 236, 34, "#b8964f");
+  t(C.品牌名稱, W / 2, 170, 60, "#5f5638", 1);
+  t("◆ 我的命理小卡 ◆", W / 2, 236, 34, "#b5a46c");
   // 主型圓
   var cy = 420; x.beginPath(); x.arc(W / 2, cy, 120, 0, Math.PI * 2);
-  var g = x.createRadialGradient(W / 2 - 40, cy - 40, 10, W / 2, cy, 120); g.addColorStop(0, "#d58a9b"); g.addColorStop(1, "#8c3d51");
-  x.fillStyle = g; x.fill(); x.lineWidth = 8; x.strokeStyle = "#efe2c2"; x.stroke();
+  var g = x.createRadialGradient(W / 2 - 40, cy - 40, 10, W / 2, cy, 120); g.addColorStop(0, "#c2b37f"); g.addColorStop(1, "#5f5638");
+  x.fillStyle = g; x.fill(); x.lineWidth = 8; x.strokeStyle = "#e6dec6"; x.stroke();
   t(String(lc.主型), W / 2, cy + 52, 150, "#ffffff", 1);
-  t("生命密碼主型", W / 2, cy + 180, 34, "#8a7378");
-  t(m.標題 || "", W / 2, cy + 250, 54, "#8c3d51", 1);
+  t("生命密碼主型", W / 2, cy + 180, 34, "#8a857a");
+  t(m.標題 || "", W / 2, cy + 250, 54, "#5f5638", 1);
   // 工作／家庭
   [["工作角色", lc.工作角色, W / 2 - 200], ["家庭角色", lc.家庭角色, W / 2 + 200]].forEach(function(q){
-    t(String(q[1]), q[2], 880, 72, "#3d2a2f", 1); t(q[0], q[2], 930, 30, "#8a7378");
+    t(String(q[1]), q[2], 880, 72, "#3a3733", 1); t(q[0], q[2], 930, 30, "#8a857a");
   });
-  t("生肖 " + r.生肖, W / 2, 900, 40, "#3d2a2f", 1);
+  t("生肖 " + r.生肖, W / 2, 900, 40, "#3a3733", 1);
   // 今年運勢
-  x.fillStyle = "#ffffff"; x.strokeStyle = "#ead9d3"; x.lineWidth = 2;
+  x.fillStyle = "#ffffff"; x.strokeStyle = "#e6e0d5"; x.lineWidth = 2;
   if (x.roundRect) { x.beginPath(); x.roundRect(130, 990, W - 260, 160, 28); x.fill(); x.stroke(); } else { x.fillRect(130, 990, W - 260, 160); }
-  t("民國 " + FY + " 年流年運勢", W / 2, 1040, 30, "#b8964f");
-  t(r.流年 + " × " + r.機會點, W / 2, 1110, 56, "#8c3d51", 1);
+  t("民國 " + FY + " 年流年運勢", W / 2, 1040, 30, "#b5a46c");
+  t(r.流年 + " × " + r.機會點, W / 2, 1110, 56, "#5f5638", 1);
   var url = (C.網站網址 || location.host + location.pathname).replace(/^https?:\/\//, "").replace(/\/$/, "");
-  t("免費測算 → " + url, W / 2, 1240, 30, "#8a7378");
+  t("免費測算 → " + url, W / 2, 1240, 30, "#8a857a");
   return cv;
 }
 // 圖卡在顯示結果時就先畫好：iPhone 的分享必須在「按下按鈕的當下」呼叫，不能等字型或畫圖
