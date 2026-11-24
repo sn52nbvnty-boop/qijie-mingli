@@ -19,12 +19,13 @@
 <meta name="theme-color" content="#6D7B86">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* 版面：手機單欄卡片；莫蘭迪藍灰色系，刻意只有淺色版 */
 :root{
-  --rose:#6D7B86; --rose-d:#4A5660; --rose-l:#E4EAED; --gold:#8A9DA8; --gold-l:#D2DBE0;
-  --ink:#333A40; --muted:#7B868E; --paper:#EDF0EF; --card:#ffffff; --line:#DCE2E3; --cream:#F6F8F8;
+  --rose:#5E6E7A; --rose-d:#3E4C57; --rose-l:#E4EAED; --gold:#8A9DA8; --gold-l:#D2DBE0;
+  --ink:#2F3840; --muted:#68747D; --paper:#EEF1F0; --card:#ffffff; --line:#DDE3E5; --cream:#F6F8F8;
+  --accent:#B5A898; --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
   --wood:#5c8a4f; --fire:#c0503f; --earth:#a8823a; --metal:#8a8f99; --water:#3f6e9e;
 }
 *{box-sizing:border-box}
@@ -32,7 +33,9 @@ html,body{margin:0}
 [hidden]{display:none!important}
 body{
   font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei","微軟正黑體",sans-serif; color:var(--ink);
-  background:var(--paper) radial-gradient(circle at 0 0,#E1E7E9 0,transparent 55%) no-repeat;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-rendering:optimizeLegibility;
+  background:radial-gradient(120% 60% at 0 0,#E0E7EA 0,transparent 60%),radial-gradient(90% 50% at 100% 100%,#ECE8E2 0,transparent 60%),var(--paper);
+  background-attachment:fixed;
   min-height:100vh; line-height:1.75; -webkit-text-size-adjust:100%;
 }
 .wrap{max-width:560px;margin:0 auto;padding-block:20px 48px;
@@ -222,6 +225,33 @@ body.result .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))} /
 #resultView .txt{font-size:16.5px;line-height:2.05;letter-spacing:.06em;color:#555C62;text-align:justify}
 #resultView .txt p{margin:0 0 1em}
 #resultView .sub-h{display:block;text-align:center;font-size:18px;color:#3A3F44;letter-spacing:.08em;border-top:1px solid #E4E9E9;margin:22px -22px 12px;padding-top:20px}
+/* ── 質感版：明體標題、深一點的字色、細線與柔和陰影 ── */
+.brand{font-family:var(--serif);font-size:30px;font-weight:700;letter-spacing:.18em;color:var(--ink)}
+.sub{color:#71838E;font-size:13.5px;letter-spacing:.32em;margin-top:6px}
+.orn{color:var(--accent);letter-spacing:.8em;font-size:10px;margin-top:12px}
+.card{border:1px solid rgba(94,110,122,.13);border-radius:22px;
+  box-shadow:0 1px 2px rgba(40,55,65,.04),0 14px 34px -14px rgba(40,55,65,.16)}
+.card h2{font-family:var(--serif);font-weight:700;color:var(--ink);letter-spacing:.06em}
+.card h2::before{background:var(--accent);width:3px}
+.lead{color:var(--muted)}
+.lead b,.txt b{color:var(--rose-d);font-weight:700}
+.btn{border-radius:14px;letter-spacing:.22em;font-weight:500;
+  background:linear-gradient(135deg,#71818C 0%,#3E4C57 100%);box-shadow:0 10px 22px -10px rgba(62,76,87,.6)}
+.btn.line{background:#06c755;box-shadow:0 10px 22px -10px rgba(6,199,85,.5)}
+.btn.ghost{background:transparent;border:1px solid rgba(62,76,87,.45);color:var(--rose-d);box-shadow:none}
+.chip{background:#EEF2F4;color:var(--rose-d);border:1px solid #DDE4E8}
+.hello .nm{font-family:var(--serif);color:var(--ink);letter-spacing:.24em}
+.lbl{color:#7E8F99;letter-spacing:.3em}
+.ico{width:72px;height:72px;margin:4px auto 18px;
+  background:linear-gradient(150deg,rgba(255,255,255,.28),rgba(255,255,255,0) 60%),var(--ic,#9FB5C3);
+  box-shadow:0 0 0 6px #fff,0 0 0 7px #DCE3E6,0 10px 22px -8px rgba(62,76,87,.35)}
+.ico svg{width:30px;height:30px;stroke-width:1.6}
+#resultView .card{padding:30px 24px 26px}
+#resultView .card>h2{font-family:var(--serif);color:var(--ink);font-size:22px;letter-spacing:.12em;margin-bottom:18px}
+#resultView .card>h2::after{content:"";display:block;width:34px;height:1px;background:var(--accent);margin:12px auto 0}
+#resultView .txt{font-size:16.5px;line-height:2;letter-spacing:.05em;color:#3B444B;text-align:justify}
+#resultView .sub-h{font-family:var(--serif);color:var(--ink);font-weight:700;border-top:1px solid #E6EBEC;margin:24px -24px 14px;padding-top:22px}
+footer{color:#7E8F99}
 @media (max-width:360px){.cycle .s{font-size:13px}.g5 .gv{font-size:20px}}
 </style>
 </head>
